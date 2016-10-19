@@ -1,0 +1,8 @@
+NN4IR
+*.log
+*.ranklist
+rob04-title/
+rob04-desc/
+clueweb09B-title/
+clueweb09B-desc/
+wordembedding/
