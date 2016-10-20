@@ -4,6 +4,6 @@ This is an implementation of the paper ["A Deep Relevance Matching Model for Ad-
 # Guide to the code / usage instruction
 this code is written in c++, and the dependence of Eigen is included. The abstract model structures are implemented in c++ class( see e.g. class NN4IR in file [NN4IR.cpp](./NN4IR.cpp) )
 you can start training the robust04 title dataset by simply run 
-  sh build.sh
+<pre><code>sh build.sh</code></pre>
 # Requirements
  * g++ 4.7 version or above( supporting c++11 )
