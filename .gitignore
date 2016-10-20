@@ -1,6 +1,7 @@
 NN4IR
 *.log
 *.ranklist
+*.bz2
 rob04-title/
 rob04-desc/
 clueweb09B-title/
