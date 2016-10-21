@@ -7,6 +7,10 @@
 
 using namespace nsnn4ir;
 
+/*
+   * the 5-fold splitation details conducted by Samuel.Huston and W.Bruce.Croft in their paper "Parameters Learned in the Comparison of Retrieval Models using Term Dependencies".
+   * this 5-fold splitation made us fairly compare our model with their models.
+*/
 void NN4IR::BruceKFold(vector<QINDEX> vecQIndex,vector<vector<QINDEX>> &vecTrain){
     vecTrain.resize(5);
     switch(m_DataType){
