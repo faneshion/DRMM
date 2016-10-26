@@ -101,6 +101,7 @@ namespace nsnn4ir{
     class NN4IR{
         protected:
             _enDataType m_DataType;
+            bool m_CalAllQ = false;
             int m_mini_batch = 20;
             int m_show_interval = 1000;
             int m_lr_decay_interval = 1000;
@@ -125,7 +126,7 @@ namespace nsnn4ir{
             Act_Func m_actfunc;
             double NNScore_LCH_IDF(const QINDEX & qindex,const string & currdoc,const vector<RMatrixXd> & vW1,const VectorXd & vW2,const vector<VectorXd> & vW3,vector<RMatrixXd> & vW1_gd,VectorXd & vW2_gd,vector<VectorXd> & vW3_gd,bool bTrain);
         public:
-            inline NN4IR(double w1_lr=0.02, double w2_lr=0.002, int minibatch=20, _enActivationType functype=_enActivationType::TANH):m_lr_w1(w1_lr),m_lr_w2(w2_lr), m_actfunc(functype){}
+            inline NN4IR(double w1_lr=0.02, double w2_lr=0.002, int minibatch=20, _enActivationType functype=_enActivationType::TANH, bool calallQ=false):m_lr_w1(w1_lr),m_lr_w2(w2_lr), m_actfunc(functype), m_CalAllQ(calallQ){}
             virtual ~NN4IR();
             void RunningMultiThread(int nFold = 5,int maxiter=10);
             void InitWordVec(const std::string &svecfile,bool binary = false);

@@ -37,14 +37,16 @@ int main(int argc,char * argv[]){
     int sample_perpositive_limited = nsnn4ir::Config::GetConfigInstance().iValue("SAMPLE_PERPOSITIVE_LIMITED");
     int sample_perquery_limited = nsnn4ir::Config::GetConfigInstance().iValue("SAMPLE_PERQUERY_LIMITED");
     int max_iteration = nsnn4ir::Config::GetConfigInstance().iValue("MAX_ITERATION");
+    bool cal_all_q = nsnn4ir::Config::GetConfigInstance().bValue("CAL_ALL_Q");
+    nsnn4ir::_enActivationType activation_func_type = nsnn4ir::_enActivationType(nsnn4ir::Config::GetConfigInstance().iValue("ACTIVATION_FUNC_TYPE"));
 
-    nsnn4ir::NN4IR  * pweor = new nsnn4ir::NN4IR(lr_w1, lr_w2, mini_batch);
+    nsnn4ir::NN4IR  * pweor = new nsnn4ir::NN4IR(lr_w1, lr_w2, mini_batch, activation_func_type, cal_all_q);
     pweor->setDataSet(task_type);
     pweor->InitGroundTruth(qrel_file,qrel_idcg_file,1);
     pweor->InitCorpInfo(corpus_term_dfcf_file,corpus_doc_count);
     pweor->InitQueryCorp(query_data_file);
-    pweor->LoadDataSet(rerank_data_file,sample_total_limited,sample_perpositive_limited,sample_perquery_limited);
     pweor->InitDocCorp(doc_data_file);
+    pweor->LoadDataSet(rerank_data_file,sample_total_limited,sample_perpositive_limited,sample_perquery_limited);
     pweor->InitWordVec(word_embed_file,true); // initial word embedding 
     pweor->InitTopKNeiB(); // calculate word similarity in advance
 
