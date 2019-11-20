@@ -6,5 +6,12 @@ this code is written in c++, and the dependence of Eigen is included. The abstra
 <pre><code>sh build.sh</code></pre>
 It will download the dataset and unpack it in the directory. All parameters passed by the [config](./config.ini) file which tells where the dataset lies. if you want to run other dataset or run other hyper-parameters, you can run
 <pre><code>./NN4IR -config config_file</code></pre>
+
+
+# Dataset download
+
+The whole datasets are listed in this [site](<http://www.bigdatalab.ac.cn/benchmark/bm/bd?code=DRMM(LCH-IDF)>).  The datasets are also placed at the pan.baidu.com (URL:https://pan.baidu.com/s/1rniqqeOU5ZKJwrlA0Kstkg  password: jmca).
+
 # Requirements
+
  * g++ 4.7 version or above( supporting c++11 )
