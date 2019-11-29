@@ -1,7 +1,7 @@
 
 
-wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/5e67ebd5-6e32-74a9-294f-45c753dce0af_rob04-title.tar.bz2 
-tar jxf 5e67ebd5-6e32-74a9-294f-45c753dce0af_rob04-title.tar.bz2
+#wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/5e67ebd5-6e32-74a9-294f-45c753dce0af_rob04-title.tar.bz2 
+#tar jxf 5e67ebd5-6e32-74a9-294f-45c753dce0af_rob04-title.tar.bz2
 
 #wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/8370623d-58e0-5685-4208-38d5d1cab60f_rob04-desc.tar.bz2
 #tar jxf 8370623d-58e0-5685-4208-38d5d1cab60f_rob04-desc.tar.bz2
@@ -12,8 +12,8 @@ tar jxf 5e67ebd5-6e32-74a9-294f-45c753dce0af_rob04-title.tar.bz2
 #wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/af8c0582-9467-f031-6041-507bfa177ee2_clueweb09B-title.tar.bz2
 #tar jxf af8c0582-9467-f031-6041-507bfa177ee2_clueweb09B-title.tar.bz2
 
-wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/717ebadf-eea1-aaf9-8754-787d7145d87f_wordembedding.tar.bz2
-tar jxf 717ebadf-eea1-aaf9-8754-787d7145d87f_wordembedding.tar.bz2
+#wget http://www.bigdatalab.ac.cn/benchmark/upload/download_source/717ebadf-eea1-aaf9-8754-787d7145d87f_wordembedding.tar.bz2
+#tar jxf 717ebadf-eea1-aaf9-8754-787d7145d87f_wordembedding.tar.bz2
 
 g++ main.cpp -o ./NN4IR NN4IR.cpp util.cpp Config.cpp -std=c++11  -O3 -w -funroll-loops -fopenmp 
 
