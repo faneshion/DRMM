@@ -20,6 +20,7 @@
 #include<algorithm>
 #include<thread>
 #include<omp.h>
+#include<random>
 #include"util.h"
 #include"Config.h"
 #include "Eigen/Dense"
